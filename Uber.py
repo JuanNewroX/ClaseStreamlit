@@ -29,7 +29,7 @@ st.sidebar.write("Hora fin:", time_slider[1])
 
 st.title("UBER PICKUPS DATA")
 st.subheader("Resumen de datos")
-df = data[(data.HourOfDay > time_slider[0]) & (data.HourOfDay < time_slider[1])]
+df = data[(data.HourOfDay >= time_slider[0]) & (data.HourOfDay <= time_slider[1])]
 
 cantidad_x_page = 1000
 if len(df) < 1000:
